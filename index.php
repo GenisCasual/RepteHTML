@@ -28,7 +28,7 @@
     $conn->close();
 ?>
 
-<a href="Logins.html">Log In</a>
+<a href="Logins/Logins.html">Log In</a>
 
 </body>
 </html>
