@@ -7,7 +7,15 @@
     <title>SOM-HI</title>
 </head>
 <body>
+
+<?php
+header("Location: /RepteHTML/RepteHTML/Main/index.html");
+exit();
+?>
+
 <?php 
+
+    
 
     include('connexio.php');
 
@@ -28,7 +36,7 @@
     $conn->close();
 ?>
 
-<a href="Logins/Logins.html">Log In</a>
+<a href="Logins/Logins.php">Log In</a>
 
 </body>
 </html>
