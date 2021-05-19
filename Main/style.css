@@ -6,7 +6,6 @@ body {
 
 * {
   font-family: Helvetica, sans-serif;
-  color: #555;
 }
 
 #main{
@@ -87,7 +86,7 @@ section{
   display:block;
   position:relative;
   width:100%;
-  min-height:100vh;
+  height:100vh;
   z-index: -1;
 }
 
@@ -97,22 +96,14 @@ section{
 }
 
 .wrapp{
-  display:flex;
-  flex-direction:row;
   position:relative;
   width:80%;
-  margin:0 auto;
-  justify-content:space-between;
+  margin:0px auto;
 }
-
-article{
-  display:flex;
-  position:relative;
-  width:100%;
-  height:100%;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
+h1{
+  margin-right: 40vw;
+  text-align: center;
+  font-size: 3rem;
 }
 
 #paragraf{
@@ -124,7 +115,7 @@ article{
   transition:all 500ms ease;
 }
 
-section#Home{background-color:#8e7e71;}
+section#Home{background-color:#8e7e71; margin-top: 22vh;}
 section#About{background-color:#ce9692;}
 section#Contact{background-color:#e1bcbb;}
 section#Other{background-color:#543146;}

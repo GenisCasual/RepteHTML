@@ -9,33 +9,9 @@
 <body>
 
 <?php
-header("Location: /RepteHTML/RepteHTML/Main/index.html");
+header("Location: /RepteHTML/RepteHTML/Main/index.php");
 exit();
 ?>
-
-<?php 
-
-    
-
-    include('connexio.php');
-
-    $sql = "SELECT * FROM recepta";
-
-    $result = $conn->query($sql);
-
-    if($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            //echo "id: " .$row["id"]. " - Name: " .$row["nom"] . " - Preu: " .$row["preu"]. "<br>";
-            echo "id: ".$row["idRecepta"]. " - Nom Recepta: ".$row["NomRecepta"]. " - Descripcio: " .$row["Descripcio"]. " - Preparació: ".$row["Preparacio"]. "- IdChef: ".$row["IdChef"]. "- IdIngredients: ".$row["IdIngredients"];
-        }
-    }
-    else{
-        echo "0 results!";
-    }
-
-    $conn->close();
-?>
-
 <a href="Logins/Logins.php">Log In</a>
 
 </body>
