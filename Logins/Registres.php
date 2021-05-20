@@ -19,7 +19,6 @@ if (isset($_GET["nom"])) {
     $sql = "insert into chef (Nom,Password,Email) VALUES ('$nom','$pass','$mail')";
     $result = $conn->query($sql);
     if ($result) {
-        echo "ARA SI QUE VA. MUAHAHAHAHA!";
     } else {
         echo "0 results!";
     }
