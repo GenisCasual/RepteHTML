@@ -23,6 +23,7 @@ if (isset($_GET["nom"])) {
           if(strtolower($row["Nom"])  == strtolower($nom) || $row["Password"] == $pass){
             echo "Logged In, $nom.";
             $login = true;
+            header("Location: ../ReceptaCrear/index.php");
             break;
           }
         }
@@ -35,6 +36,7 @@ if (isset($_GET["nom"])) {
 ?>
 
 <body>
+<a href="../Main/index.php" id="HomeBut">HOME</a>
     <div class="login-page">
         <div class="form" onsubmit="location.replace('../Main/index.html')">
           <form class="login-form" method="GET">

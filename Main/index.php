@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es" >
 <head>
-  <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +13,14 @@
 <?php 
     include('../connexio.php');
 
-    $sql = "SELECT * FROM recepta";
+    $sql = "SELECT * FROM receptes";
 
     $result = $conn->query($sql);
-    /*
+
     if($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            //echo "id: " .$row["id"]. " - Name: " .$row["nom"] . " - Preu: " .$row["preu"]. "<br>";
-            echo "id: ".$row["idRecepta"]. " - Nom Recepta: ".$row["NomRecepta"]. " - Descripcio: " .$row["Descripcio"]. " - Preparació: ".$row["Preparacio"]. "- IdChef: ".$row["IdChef"]. "- IdIngredients: ".$row["IdIngredients"];
         }
     }
-    else{
-        echo "0 results!";
-    }
-*/
 
 ?>
 
@@ -44,9 +38,8 @@
       
     <ul>
       <li><a onclick="llisca('#Home');">Home</a></li>
-      <li><a onclick="llisca('#About');">About</a></li>
+      <li><a href="../Logins/Logins.php">Login</a></li>
       <li><a onclick="llisca('#Contact');">Contact</a></li>
-      <li><a onclick="llisca('#Other');">Other</a></li>
     </ul>
   </label>
   </div>
@@ -54,27 +47,21 @@
 </nav>
 <section id="Home">
   <div class="wrapp">
-    <h2>Arros amb bolets</h2>
-    <p>Recepta sdnfkdlsfndksf dksfndslk fdnks lfnds knfdsl fdnksl fdnsklf dskllkas.</p>
-      <?php    /*     
+      <?php      
         if($result = mysqli_query($conn,$sql)){
           if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_array($result)){
-              echo "<p> " .$row["NomRecepta"]." </p>";
+              echo "<h2> " .$row["NomRecepta"]." </h2>";
+              echo "<p> ". $row["Descripcio"]. "</p>";
             }
           }
         }
 
-        $conn->close();*/
+        $conn->close();
       ?>
   </div>
 </section>
-<section id="About">
-  <div class="wrapp">
-    <h1>About</h1>
-    <p> A lot of text. </p>
-  </div>
-</section>
+
 <section id="Contact">
   <div class="wrapp">
     <article>
@@ -88,11 +75,6 @@
         Nam venenatis, massa sed faucibus luctus, nisl mi pharetra nunc, eget dignissim ligula ante at leo. 
       </p>
       </article>
-  </div>
-</section>
-<section id="Other">
-  <div class="wrapp">
-    <h1>Other</h1>
   </div>
 </section>
 </body>
