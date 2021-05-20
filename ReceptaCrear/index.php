@@ -19,7 +19,7 @@ if (isset($_GET["nom"])) {
     $sql = "insert into receptes (NomRecepta,Descripcio) VALUES ('$nom','$desc')";
     $result = $conn->query($sql);
     if ($result) {
-        echo "ARA SI QUE VA. MUAHAHAHAHA!";
+
     } else {
         echo "0 results!";
     }
@@ -31,7 +31,6 @@ if (isset($_GET["nom"])) {
 <a href="../Main/index.php" id="HomeBut">HOME</a>
 <section id="About">
   <div class="wrapp">
-    <h1>Nova Recepta</h1>
     <div class="login-page">
         <div class="form">
             <form class="register" method="GET">
